@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More specifications</title>
+    <link rel="stylesheet" href="more-specifications.css">
+</head>
+<body>
+    <form action="UTF">
+        
+        <span> select number of questions-</span>
+        <select name="noq" id="nq">
+        <option value="6" type ="number">5</option>
+        <option value="6" type="number">6</option>
+        <option value="7" type ="number">7</option>
+        <option value="8" type="number">8</option>
+        <option value="9" type ="number">9</option>
+        <option value="10" type="number">10</option>
+    </select><br>
+    <span> select difficulty level-</span>
+    <select name="difflevel" id="dl">
+        <option value="easy">easy</option>
+        <option value="medium">medium</option>
+        <option value="hrd">hard</option>
+    </select> <br>
+    type of question questions
+    encoding
+    </form>
+    <a href="", id="lkfnp">Take test</a>
+</body>
+    <script>
+        var noq=(function() {
+    
+    // get references to select list and display text box
+    var sel = document.getElementById('noq');
+    function getSelectedOption(sel) {
+        var opt;
+        for ( var i = 0, len = sel.options.length; i < len; i++ ) {
+            opt = sel.options[i];
+            if ( opt.selected === true ) {
+                break;
+            }
+        }
+        return opt;
+    }   
+}());
+var difficulty=(function() {
+    var sel = document.getElementById('dl');
+    function getSelectedOption(sel) {
+        var opt;
+        for ( var i = 0, len = sel.options.length; i < len; i++ ) {
+            opt = sel.options[i];
+            if ( opt.selected === true ) {
+                break;
+            }
+        }
+        return opt;
+    }
+
+    // assign onclick handlers to the buttons
+    
+    
+}());
+ var path=`https://opentdb.com/api.php?amount=${noq}&category=25&difficulty=${difficulty}&type=multiple&encode=url3986`
+    var nxtpg=getElementById("lkfnp");
+    nxtpg.setAttribute("href"=`${path}`);
+    </script>
+</html>
