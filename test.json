@@ -1,125 +1,32 @@
 {
-  "response_code": 0,
-  "results": [
-    {
-      "category": "Sports",
-      "type": "multiple",
-      "difficulty": "easy",
-      "question": "The%20Rio%202016%20Summer%20Olympics%20held%20it%27s%20closing%20ceremony%20on%20what%20date%3F",
-      "correct_answer": "August%2021",
-      "incorrect_answers": [
-        "August%2023",
-        "August%2019",
-        "August%2017"
-      ]
-    },
-    {
-      "category": "Sports",
-      "type": "multiple",
-      "difficulty": "hard",
-      "question": "Where%20was%20the%20Games%20of%20the%20XXII%20Olympiad%20held%3F",
-      "correct_answer": "Moscow",
-      "incorrect_answers": [
-        "Barcelona",
-        "Tokyo",
-        "Los%20Angeles"
-      ]
-    },
-    {
-      "category": "Sports",
-      "type": "multiple",
-      "difficulty": "hard",
-      "question": "Which%20Italian%20footballer%20told%20Neuer%20where%20he%27s%20putting%20his%20shot%20and%20dragging%20it%20wide%2C%20during%20the%20match%20Italy-Germany%2C%20UEFA%20EURO%202016%3F",
-      "correct_answer": "Pelle",
-      "incorrect_answers": [
-        "Insigne",
-        "Barzagli",
-        "Giaccherini"
-      ]
-    },
-    {
-      "category": "Sports",
-      "type": "multiple",
-      "difficulty": "medium",
-      "question": "Which%20soccer%20team%20won%20the%20Copa%20Am%C3%A9rica%202015%20Championship%20%3F",
-      "correct_answer": "Chile",
-      "incorrect_answers": [
-        "Argentina",
-        "Brazil",
-        "Paraguay"
-      ]
-    },
-    {
-      "category": "Sports",
-      "type": "multiple",
-      "difficulty": "medium",
-      "question": "What%20year%20was%20hockey%20legend%20Wayne%20Gretzky%20born%3F",
-      "correct_answer": "1961",
-      "incorrect_answers": [
-        "1965",
-        "1959",
-        "1963"
-      ]
-    },
-    {
-      "category": "Sports",
-      "type": "multiple",
-      "difficulty": "easy",
-      "question": "When%20was%20the%20first%20official%20international%20game%20played%3F",
-      "correct_answer": "1872",
-      "incorrect_answers": [
-        "1880",
-        "1863",
-        "1865"
-      ]
-    },
-    {
-      "category": "Sports",
-      "type": "multiple",
-      "difficulty": "medium",
-      "question": "How%20many%20French%20Open%27s%20did%20Bj%C3%B6rn%20Borg%20win%3F",
-      "correct_answer": "6",
-      "incorrect_answers": [
-        "4",
-        "9",
-        "2"
-      ]
-    },
-    {
-      "category": "Sports",
-      "type": "multiple",
-      "difficulty": "medium",
-      "question": "Which%20professional%20wrestler%20fell%20from%20the%20rafters%20to%20his%20death%20during%20a%20live%20Pay-Per-View%20event%20in%201999%3F",
-      "correct_answer": "Owen%20Hart",
-      "incorrect_answers": [
-        "Chris%20Benoit",
-        "Lex%20Luger",
-        "Al%20Snow"
-      ]
-    },
-    {
-      "category": "Sports",
-      "type": "multiple",
-      "difficulty": "easy",
-      "question": "Who%20won%20the%20UEFA%20Champions%20League%20in%202016%3F",
-      "correct_answer": "Real%20Madrid%20C.F.",
-      "incorrect_answers": [
-        "FC%20Bayern%20Munich",
-        "Atletico%20Madrid",
-        "Manchester%20City%20F.C."
-      ]
-    },
-    {
-      "category": "Sports",
-      "type": "multiple",
-      "difficulty": "hard",
-      "question": "In%20Canadian%20football%2C%20scoring%20a%20rouge%20is%20worth%20how%20many%20points%3F",
-      "correct_answer": "1",
-      "incorrect_answers": [
-        "2",
-        "3",
-        "4"
-      ]
-    }
+  "trivia_categories": [
+    { "id": 9, "name": "General Knowledge" },
+    { "id": 10, "name": "Entertainment: Books" },
+    { "id": 11, "name": "Entertainment: Film" },
+    { "id": 12, "name": "Entertainment: Music" },
+    { "id": 13, "name": "Entertainment: Musicals & Theatres" },
+    { "id": 14, "name": "Entertainment: Television" },
+    { "id": 15, "name": "Entertainment: Video Games" },
+    { "id": 16, "name": "Entertainment: Board Games" },
+    { "id": 17, "name": "Science & Nature" },
+    { "id": 18, "name": "Science: Computers" },
+    { "id": 19, "name": "Science: Mathematics" },
+    { "id": 20, "name": "Mythology" },
+    { "id": 21, "name": "Sports" },
+    { "id": 22, "name": "Geography" },
+    { "id": 23, "name": "History" },
+    { "id": 24, "name": "Politics" },
+    { "id": 25, "name": "Art" },
+    { "id": 26, "name": "Celebrities" },
+    { "id": 27, "name": "Animals" },
+    { "id": 28, "name": "Vehicles" },
+    { "id": 29, "name": "Entertainment: Comics" },
+    { "id": 30, "name": "Science: Gadgets" },
+    { "id": 31, "name": "Entertainment: Japanese Anime & Manga" },
+    { "id": 32, "name": "Entertainment: Cartoon & Animations" }
   ]
 }
+
+
+
+
