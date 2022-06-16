@@ -5,6 +5,7 @@ let submit = document.createElement("button");
 submit.className = "submit";
 submit.innerHTML = "Submit";
 var nqc = 0;
+let answered = [];
 
 // some variables
 let numQues = 0;
@@ -25,14 +26,10 @@ let StartQuiz = () => {
   if (random == 1) {
     div.innerHTML = ` <label for="agree" id="agree">${questions[idx].text}</label>
 <p class="option">
-    <input type="radio" name="option"  value="1">
-    <label for="option" id="i1">${questions[idx].correct}</label> <br>
-    <input type="radio" name="option" value="2">
-    <label for="option" id="i2">${questions[idx].incorrect[0]}</label><br>
-    <input type="radio" name="option" value="3">
-    <label for="option"id="i3" >${questions[idx].incorrect[1]}</label><br>
-    <input type="radio" name="option" value="4">
-    <label for="option" id="i4">${questions[idx].incorrect[2]}</label><br>
+    <input type="radio" class = "options" name="option"  value="1">${questions[idx].correct}<br></input>
+    <input type="radio" class = "options" name="option" value="2">${questions[idx].incorrect[0]}<br></input>
+    <input type="radio" class = "options" name="option" value="3">${questions[idx].incorrect[1]}<br></input>
+    <input type="radio" class = "options" name="option" value="4">${questions[idx].incorrect[2]}<br></input>
 </p>
 <button id="btn_two">Previous</button>
 <button id="btn_one">Next</button>
@@ -40,14 +37,10 @@ let StartQuiz = () => {
   } else if (random == 2) {
     div.innerHTML = ` <label for="agree" id="agree">${questions[idx].text}</label>
     <p class="option">
-        <input type="radio" name="option"  value="2">
-        <label for="option" id="i2">${questions[idx].incorrect[0]}</label> <br>
-        <input type="radio" name="option" value="1">
-        <label for="option" id="i1">${questions[idx].correct}</label><br>
-        <input type="radio" name="option" value="3">
-        <label for="option"id="i3" >${questions[idx].incorrect[1]}</label><br>
-        <input type="radio" name="option" value="4">
-        <label for="option" id="i4">${questions[idx].incorrect[2]}</label><br>
+        <input type="radio" class = "options" name="option"  value="2">${questions[idx].incorrect[0]}<br></input>
+        <input type="radio" class = "options" name="option" value="1">${questions[idx].correct}<br></input>
+        <input type="radio" class = "options" name="option" value="3">${questions[idx].incorrect[1]}<br></input>
+        <input type="radio" class = "options" name="option" value="4">${questions[idx].incorrect[2]}<br></input>
     </p>
     <button id="btn_two">Previous</button>
     <button id="btn_one">Next</button>
@@ -55,14 +48,10 @@ let StartQuiz = () => {
   } else if (random == 3) {
     div.innerHTML = ` <label for="agree" id="agree">${questions[idx].text}</label>
         <p class="option">
-            <input type="radio" name="option"  value="3">
-            <label for="option" id="i3">${questions[idx].incorrect[0]}</label> <br>
-            <input type="radio" name="option" value="2">
-            <label for="option" id="i2">${questions[idx].incorrect[1]}</label><br>
-            <input type="radio" name="option" value="1">
-            <label for="option"id="i1" >${questions[idx].correct}</label><br>
-            <input type="radio" name="option" value="4">
-            <label for="option" id="i4">${questions[idx].incorrect[2]}</label><br>
+            <input type="radio" class = "options" name="option"  value="2">${questions[idx].incorrect[0]}<br></input>
+            <input type="radio" class = "options" name="option" value="3">${questions[idx].incorrect[1]}<br></input>
+            <input type="radio" class = "options" name="option" value="1">${questions[idx].correct}<br></input>
+            <input type="radio" class = "options" name="option" value="4">${questions[idx].incorrect[2]}<br></input>
         </p>
         <button id="btn_two">Previous</button>
         <button id="btn_one">Next</button>
@@ -70,14 +59,10 @@ let StartQuiz = () => {
   } else if (random == 4) {
     div.innerHTML = ` <label for="agree" id="agree">${questions[idx].text}</label>
             <p class="option">
-                <input type="radio" name="option"  value="4">
-                <label for="option" id="i4">${questions[idx].incorrect[0]}</label> <br>
-                <input type="radio" name="option" value="2">
-                <label for="option" id="i2">${questions[idx].incorrect[2]}</label><br>
-                <input type="radio" name="option" value="3">
-                <label for="option"id="i3" >${questions[idx].incorrect[1]}</label><br>
-                <input type="radio" name="option" value="1">
-                <label for="option" id="i1">${questions[idx].correct}</label><br>
+                <input type="radio" class = "options" name="option"  value="2">${questions[idx].incorrect[0]}</input><br>
+                <input type="radio" class = "options" name="option" value="4">${questions[idx].incorrect[2]}</input><br>
+                <input type="radio" class = "options" name="option" value="3">${questions[idx].incorrect[1]}</input><br>
+                <input type="radio" class = "options" name="option" value="1">${questions[idx].correct}</input><br>
             </p>
             <button id="btn_two">Previous</button>
             <button id="btn_one">Next</button>
@@ -89,24 +74,17 @@ let StartQuiz = () => {
 
   // var checked =document.querySelector('input[name="agree"]:checked').value;
   //if(checked==1)nqc++;
-  let answered = [];
 
   nxtbtn.addEventListener("click", () => {
     let radio = document.querySelectorAll("input[type='radio']");
-    let options = document.querySelectorAll(".option label");
     idx++;
-    for (let i of radio) {
-      if (i.checked && i.value === "1") {
+    for (var i=0;i< radio.length;i++) {
+      if (radio[i].checked && radio[i].value === "1") {
         nqc++;
       }
-      let index;
-      if (i.checked){
-        for(let j=0; j<radio.length;j++){
-            if(radio[j]===i)
-            index = j;
-        }
+      if (radio[i].checked){
+      answered.push(radio[i].value);
       } 
-      answered.push(options[index].innerText)
       console.log(answered);
     }
     if (idx < questions.length) StartQuiz();
@@ -121,13 +99,20 @@ let StartQuiz = () => {
   });
 
   submit.addEventListener("click", () => {
+    var ansarr=[];
+    for (var i=0; i < answered.length; i++) {
+      if(answered[i]==1)ansarr.push(questions[i].correct);
+      else{
+        ansarr.push(questions[i].incorrect[answered[i]-2]);
+      }
+    }
     body.innerHTML = `<h2>your questions are submitted and you have done ${nqc} correct questions answers are shown below</h2>`;
     let ques = document.createElement("div");
     for (let idx = 0; idx < questions.length; idx++) {
       let que = document.createElement("div");
       que.innerHTML = ` <div id="agree">${questions[idx].text}</div>
         <p class="option">${questions[idx].correct}</p>
-        <p class="option">${answered[idx]}</p>
+        <p class="option">${ansarr[idx]}</p>
         `;
       ques.append(que);
     }
