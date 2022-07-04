@@ -108,11 +108,13 @@ let StartQuiz = () => {
     }
     body.innerHTML = `<h2>your questions are submitted and you have done ${nqc} correct questions answers are shown below</h2>`;
     let ques = document.createElement("div");
+    ques.className="ques";
     for (let idx = 0; idx < questions.length; idx++) {
       let que = document.createElement("div");
-      que.innerHTML = ` <div id="agree">${questions[idx].text}</div>
-        <p class="option">${questions[idx].correct}</p>
-        <p class="option">${ansarr[idx]}</p>
+      que.className="que";
+      que.innerHTML = ` <div id="agree">${idx+1} ${questions[idx].text}</div>
+        <p class="option">correct answer: ${questions[idx].correct}</p>
+        <p class="option">chosen option:${ansarr[idx]}</p>
         `;
       ques.append(que);
     }
