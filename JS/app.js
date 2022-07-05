@@ -106,7 +106,7 @@ let StartQuiz = () => {
         ansarr.push(questions[i].incorrect[answered[i]-2]);
       }
     }
-    body.innerHTML = `<h2>your questions are submitted and you have done ${nqc} correct questions answers are shown below</h2>`;
+    body.innerHTML = `<h2>your questions are submitted and you have done ${nqc} correct questions. answers are shown below</h2>`;
     let ques = document.createElement("div");
     ques.className="ques";
     for (let idx = 0; idx < questions.length; idx++) {
